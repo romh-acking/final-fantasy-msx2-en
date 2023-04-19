@@ -1,0 +1,1205 @@
+{
+  "spiroVersion": 3,
+  "files": {	
+	"SMAP.COM": ".\\saydos\\files\\SMAP.COM",
+	"SHOP.MSG": ".\\saydos\\files\\SHOP.MSG",
+	
+	"MENU.COM": ".\\saydos\\files\\MENU.COM",
+	"MENU.MSG": ".\\saydos\\files\\MENU.MSG",
+	
+	"OPENEND.COM": ".\\saydos\\files\\OPENEND.COM",
+	
+	"MAIN.COM": ".\\saydos\\files\\MAIN.COM",
+	"NAMAE.MSG": ".\\saydos\\files\\NAMAE.MSG",
+	
+	"BATTLE.COM": ".\\saydos\\files\\BATTLE.COM",
+	"BDATA.TBL": ".\\saydos\\files\\BDATA.TBL",
+	"MONNAME.MSG": ".\\saydos\\files\\MONNAME.MSG",
+	"BATTLE.MSG": ".\\saydos\\files\\BATTLE.MSG",
+	
+	"MESSAGE.VEC": ".\\saydos\\files\\MESSAGE.VEC",
+	"MESSAGE.MSG": ".\\saydos\\files\\MESSAGE.MSG",
+	
+	"STARTUP.COM": ".\\saydos\\files\\STARTUP.COM",
+	
+	"sector0000": ".\\saydos\\sectors\\0000.bin",
+	"sector0002": ".\\saydos\\sectors\\0002.bin",
+  },
+  "scripts": {
+    "scriptPath": ".\\script\\Script.json",
+    "original": true,
+    "comment": true,
+    "new": true,
+    "bytes": false,
+    "menu": true,
+    "proof": false
+  },
+  "misc": {
+    "blankOutTextDataAfterRead": true,
+    "blankOutByte": "0x62",
+    "getFileToWritePointerFromPointersField": true,
+	"includedPointerMetadata": true
+  },
+  "scriptManager": {
+    "writeScript": "",
+    "displayReplace": [
+      {
+        "find": "\\[LINE\\]|\\[STOP\\]|\\[Lf\\]",
+        "replace": "\r\n"
+      },
+	  {
+        "find": "\\[LINEx2\\]",
+        "replace": "\r\n\r\n"
+      },
+	  {
+        "find": "\\[.*?\\]",
+        "replace": "#"
+      }
+    ]
+  },
+  "pointers": {
+    "read&Write": {
+      "Shop Stuff": {
+		"disabled": false,
+        "pointerFormat": {
+          "file": "SMAP.COM",
+          "addresses": [ 
+			"0x000020F7",
+			"0x00002119",
+			"0x000021E5",
+			"0x00002254",
+			"0x00002291",
+			"0x00002D93",
+			"0x00002DA7",
+			"0x00002DE3",
+			"0x00002E0C",
+			"0x00002E21",
+			"0x00002E3A",
+			"0x00002E79",
+			"0x00002EAF",
+			"0x00002ED3",
+			"0x00002F16",
+			"0x00002FAC",
+			"0x00002FC3",
+			"0x00003079",
+			"0x0000308D",
+			"0x000030B2",
+			"0x000030D6",
+			"0x000030FC",
+			"0x0000312B",
+			"0x0000318A",
+			"0x000031EF",
+			"0x000032B8",
+			"0x000032F8",
+			"0x00003314",
+			"0x00003355",
+			"0x0000336C",
+			"0x000033A6",
+			"0x000033ED",
+			"0x0000352B",
+			"0x0000357E",
+			"0x00003596",
+			"0x00003645"
+		  ],
+          "pcDifference": "-0x00AACA+0x00002ACA",
+          "addressConversion": "None",
+          "entryNumber": 38,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 4,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "DD", "21", "(B0)", "(B1)" ],
+          "subentryKeyPrefix": "shop"
+        },
+        "renderFormat": {
+          "file": "SMAP.COM",
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+          "reverseTableEndianness": true
+        }
+      },
+      "Menu Stuff": {
+		"disabled": false,
+        "pointerFormat": {
+		  "file": "MENU.COM",
+          "addresses": [ 
+			"0x0000009B",
+			"0x000000AE",
+			"0x00001114",
+			"0x00001129",
+			"0x00001325",
+			"0x00001550",
+			"0x0000157E",
+			"0x000015B9",
+			"0x0000163D",
+			"0x0000167F",
+			"0x000016A4",
+			"0x00001841",
+			"0x00001864",
+			"0x00001A70",
+			"0x00001AE9",
+			"0x00001B1D",
+			"0x00001B56",
+			"0x00001B8A",
+			"0x00001BC3",
+			"0x00001BF7",
+			"0x00001C1F",
+			"0x00001C53",
+			"0x00001C7E",
+			"0x00001D3D",
+			"0x00001DCC",
+			"0x00002048",
+			"0x0000205E",
+			"0x00002071",
+			"0x00002084",
+			"0x00002097",
+			"0x000020AA",
+			"0x000020BD",
+			"0x000020D0",
+			"0x000020E3",
+			"0x000020F6",
+			"0x00002109",
+			"0x00002632",
+			"0x00002645",
+			"0x00002658",
+			"0x0000266B",
+			"0x0000267E",
+			"0x00002691"
+		  ],
+          "pcDifference": "-0xA6A5+0x000026A5",
+          "addressConversion": "None",
+          "entryNumber": 64,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 4,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "DD", "21", "(B0)", "(B1)" ],
+          "subentryKeyPrefix": "menu"
+        },
+        "renderFormat": {
+		  "file": "MENU.COM",
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+		  "includeRedirects": false,
+          "squishyTextFile": ".\\tables\\FindAndReplace (Menu)",
+		  "squishyTextFileUseregex": true
+        }
+      },
+      "Special text": {
+		"disabled": false,
+        "file": "OPENEND.COM",
+        "pointerFormat": {
+          "addresses": [ 
+			"0x00000126"
+		  ],
+          "pcDifference": "-0x0084A5+0x000004A5",
+          "addressConversion": "None",
+          "entryNumber": 25,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 4,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "DD", "21", "(B0)", "(B1)" ],
+          "subentryKeyPrefix": "special"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+		  "includeRedirects": false
+        }
+      },
+      "Misc": {
+		"disabled": false,
+		"_note": "15 references in total, not important to get them all",
+        "pointerFormat": {
+		  "file": "MAIN.COM",
+          "addresses": [ 
+			"0x00002A82",
+			"0x00002BE5",
+			"0x00002C03",
+			"0x00002DC3",
+			"0x00002DDE"
+		  ],
+          "pcDifference": "-0x3900+0x0",
+          "addressConversion": "None",
+          "entryNumber": 256,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 4,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "DD", "21", "(B0)", "(B1)" ],
+          "subentryKeyPrefix": "misc"
+        },
+        "renderFormat": {
+		  "file": "NAMAE.MSG",
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+		  "includeRedirects": false
+        }
+      },
+      "Enemy Attacks": {
+		"disabled": false,
+        "pointerFormat": {
+		  "file": "BATTLE.COM",
+          "addresses": [ 
+			"0x00001A58"
+		  ],
+          "pcDifference": "-0x00001A00+0x00001200",
+          "addressConversion": "None",
+          "entryNumber": 14,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 4,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "DD", "21", "(B0)", "(B1)" ],
+          "subentryKeyPrefix": "enemies"
+        },
+        "renderFormat": {
+		  "file": "BDATA.TBL",
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+		  "includeRedirects": false
+        }
+      },
+      "Enemies": {
+		"disabled": false,
+        "pointerFormat": {
+		  "file": "BATTLE.COM",
+          "addresses": [ 
+			"0x000002CE",
+			"0x0000042D"
+		  ],
+          "pcDifference": "-0x1E10+0x00001610",
+          "addressConversion": "None",
+          "entryNumber": 128,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 4,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "DD", "21", "(B0)", "(B1)" ],
+          "subentryKeyPrefix": "enemies"
+        },
+        "renderFormat": {
+		  "file": "BDATA.TBL",
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+		  "includeRedirects": false
+        }
+      },
+      "Battle Level Up": {
+		"file": "BATTLE.COM",
+		"disabled": false,
+        "pointerFormat": {
+          "addresses": [ 
+			"0x000005CE",
+			"0x000005E1",
+			"0x00000601"
+		  ],
+          "pcDifference": "-0x00008611+0x00000611",
+          "addressConversion": "None",
+          "entryNumber": 3,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 4,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "DD", "21", "(B0)", "(B1)" ],
+          "subentryKeyPrefix": "battleLvlUp"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+		  "includeRedirects": false
+        }
+      },
+	  "Battle Level Up #2": {
+		"file": "BATTLE.COM",
+		"disabled": false,
+        "pointerFormat": {
+          "addresses": [
+			"0x00000865",
+			"0x0000088A"
+		  ],
+          "pcDifference": "-0x00008611+0x00000611",
+          "addressConversion": "None",
+          "entryNumber": 2,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 4,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "DD", "21", "(B0)", "(B1)" ],
+          "subentryKeyPrefix": "battleLvlUp2"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+          "reverseTableEndianness": true
+        }
+      },
+      "Battle Menu": {
+		"disabled": false,
+		"file": "BATTLE.COM",
+        "pointerFormat": {
+          "addresses": [ 
+			"0x000002EC"
+		  ],
+          "pcDifference": "-0x82f4+0x000002F4",
+          "addressConversion": "None",
+          "entryNumber": 1,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 4,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "DD", "21", "(B0)", "(B1)" ],
+          "subentryKeyPrefix": "battleMenu"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+		  "includeRedirects": false,
+          "squishyTextFile": ".\\tables\\FindAndReplace (Battle)",
+		  "squishyTextFileUseregex": true
+        }
+      },
+	  "Battle Menu #2": {
+		"disabled": false,
+		"file": "BATTLE.COM",
+        "pointerFormat": {
+          "addresses": [
+			"0x0000377C",
+			"0x00003797"
+		  ],
+          "pcDifference": "-0x82f4+0x000002F4",
+          "addressConversion": "None",
+          "entryNumber": 2,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 4,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "DD", "21", "(B0)", "(B1)" ],
+          "subentryKeyPrefix": "battleMenu2"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+		  "includeRedirects": false,
+          "squishyTextFile": ".\\tables\\FindAndReplace (Battle)",
+		  "squishyTextFileUseregex": true
+        }
+      },
+      "Dialogue": {
+		"disabled": false,
+        "pointerFormat": {
+		  "file": "MESSAGE.VEC",
+          "addresses": [ "0x00" ],
+          "pcDifference": "-0x8200",
+          "addressConversion": "None",
+          "entryNumber": 256,
+          "pointerType": "LittleEndian",
+          "pointerLength": 2,
+          "bytesBetween": "0",
+          "subentryKeyPrefix": "dialogue"
+        },
+        "renderFormat": {
+		  "file": "MESSAGE.MSG",
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+          "reverseTableEndianness": true
+        }
+      },
+      "Battle Messages": {
+		"disabled": false,
+        "pointerFormat": {
+		  "file": "BATTLE.COM",
+          "addresses": [ 
+			"0x00000179",
+			"0x000003C1",
+			"0x0000046A",
+			"0x00000558",
+			"0x00000564",
+			"0x000008B4",
+			"0x000008C2",
+			"0x0000175E",
+			"0x00001777",
+			"0x00001E80"
+		  ],
+          "pcDifference": "-0x00001A50+0x00001250",
+          "addressConversion": "None",
+          "entryNumber": 78,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 4,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "DD", "21", "(B0)", "(B1)" ],
+          "subentryKeyPrefix": "battleMessage"
+        },
+        "renderFormat": {
+		  "file": "BDATA.TBL",
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+          "reverseTableEndianness": true,
+          "squishyTextFile": ".\\tables\\FindAndReplace (Battle)",
+		  "squishyTextFileUseregex": false
+        }
+      },
+	  "Nothing": {
+		"file": "BATTLE.COM",
+		"disabled": false,
+        "pointerFormat": {
+          "addresses": [ 
+			"0x00003199"
+		  ],
+          "pcDifference": "-0xB1AA+0x000031AA",
+          "addressConversion": "None",
+          "entryNumber": 1,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 4,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "DD", "21", "(B0)", "(B1)" ],
+          "subentryKeyPrefix": "nothing"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+          "reverseTableEndianness": true
+        }
+      },
+	  "Disk": {
+		"file": "MAIN.COM",
+		"disabled": false,
+        "pointerFormat": {
+          "addresses": [ 
+			"0x00001CF6",
+			"0x00001D0D",
+			"0x00001DAA",
+			"0x00002540"
+		  ],
+          "pcDifference": "-0x5db9+0x00001DB9",
+          "addressConversion": "None",
+          "entryNumber": 3,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 4,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "DD", "21", "(B0)", "(B1)" ],
+          "subentryKeyPrefix": "disk"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+          "reverseTableEndianness": true
+        }
+      },
+	  "Menu Stuff #2": {
+		"file": "MENU.COM",
+		"disabled": false,
+        "pointerFormat": {
+          "addresses": [ 
+			"0x000001A6",
+			"0x000001BC"
+		  ],
+          "pcDifference": "-0x82ec+0x2ec",
+          "addressConversion": "None",
+          "entryNumber": 8,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 4,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "DD", "21", "(B0)", "(B1)" ],
+          "subentryKeyPrefix": "menu2"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+          "reverseTableEndianness": true
+        }
+      },
+	  "Start up Menu": {
+		"file": "STARTUP.COM",
+		"disabled": false,
+        "pointerFormat": {
+          "addresses": [
+			"0x00000261",
+			"0x00000274",
+			"0x00000287",
+		  ],
+          "pcDifference": "-0x8000",
+          "addressConversion": "None",
+          "entryNumber": 4,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 4,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "DD", "21", "(B0)", "(B1)" ],
+          "subentryKeyPrefix": "startupMenu"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+          "reverseTableEndianness": true
+        }
+      },
+	  "Start up Menu #2": {
+		"file": "STARTUP.COM",
+		"disabled": false,
+        "pointerFormat": {
+          "addresses": [
+			"0x0000058C"
+		  ],
+          "pcDifference": "-0x8000",
+          "addressConversion": "None",
+          "entryNumber": 1,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 4,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "DD", "21", "(B0)", "(B1)" ],
+          "subentryKeyPrefix": "startupMenu"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+          "reverseTableEndianness": true
+        }
+      },
+	  "Chest": {
+		"file": "SMAP.COM",
+		"disabled": false,
+        "pointerFormat": {
+          "addresses": [
+			"0x00000687",
+			"0x0000069E"
+		  ],
+          "pcDifference": "-0x000086C0+0x000006C0",
+          "addressConversion": "None",
+          "entryNumber": 2,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 4,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "DD", "21", "(B0)", "(B1)" ],
+          "subentryKeyPrefix": "chest"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+          "reverseTableEndianness": true
+        }
+      },
+      "Menu Stuff #3": {
+		"file": "MENU.COM",
+		"disabled": false,
+        "pointerFormat": {
+          "addresses": [ 
+			"0x0000165E",
+			"0x00001751",
+			"0x00001D1E",
+			"0x00001DAD",
+			"0x00001EA9"
+		  ],
+          "pcDifference": "-0x8ccc+0x00000CCC",
+          "addressConversion": "None",
+          "entryNumber": 1,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 4,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "DD", "21", "(B0)", "(B1)" ],
+          "subentryKeyPrefix": "menu3"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+          "reverseTableEndianness": true
+        }
+      },
+      "Disk Format": {
+		"file": "STARTUP.COM",
+		"disabled": false,
+        "pointerFormat": {
+          "addresses": [ 
+			"0x000007E5",
+			"0x0000082D",
+			"0x00000860",
+			"0x0000086E",
+			"0x000008BD",
+			"0x000008F3",
+			"0x0000091F",
+			"0x0000092B",
+			"0x0000094B",
+			"0x00000972",
+			"0x000009EB",
+			"0x000009FA",
+			"0x00000A05",
+			"0x00000A0F",
+		  ],
+          "pcDifference": "-0x00008A41+0x00000A41",
+          "addressConversion": "None",
+          "entryNumber": 1,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 6,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "21", "(B0)", "(B1)", "cd", "24", "8a" ],
+          "subentryKeyPrefix": "diskFormat"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "$" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\BIOS",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "squishyTextFile": ".\\tables\\FindAndReplace (BIOS)",
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+          "reverseTableEndianness": true,
+        }
+      },
+      "Bootup": {
+		"file": "sector0002",
+		"disabled": false,
+        "pointerFormat": {
+          "addresses": [ 
+			"0x00000031",
+			"0x0000006B",
+			"0x00000091",
+		  ],
+          "pcDifference": "-0x00008000",
+          "addressConversion": "None",
+          "entryNumber": 1,
+          "pointerType": "Custom",
+          "pointerGrouping": "single",
+          "pointerLength": 6,
+          "bytesBetween": "0",
+          "customPointerFormat": [ "21", "(B0)", "(B1)", "cd", "D9", "80" ],
+          "subentryKeyPrefix": "boot"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "$" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR", "Dictionary", "ControlCode" ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\BIOS",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": false,
+          "squishyTextFile": ".\\tables\\FindAndReplace (BIOS)",
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+          "reverseTableEndianness": true,
+        }
+      },
+	},
+	"read": {
+	  "DTE": {
+		"disabled": true,
+		"file": "sector0000",
+        "pointerFormat": {
+          "addresses": [ "0x000BF" ],
+          "pcDifference": "-0x0",
+          "addressConversion": "None",
+          "entryNumber": 102,
+          "pointerType": "none",
+          "pointerGrouping": "single",
+          "pointerLength": 0,
+          "subentryKeyPrefix": "dte"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR" ],
+          "isDictionary": true,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": true,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+          "reverseTableEndianness": true
+        }
+	  }
+	},
+	"write": {
+	  "DTE": {
+		"disabled": false,
+		"file": "sector0000",
+        "pointerFormat": {
+          "addresses": [ "0x000BF" ],
+          "pcDifference": "-0x0",
+          "addressConversion": "None",
+          "entryNumber": 102,
+          "pointerType": "none",
+          "pointerGrouping": "single",
+          "pointerLength": 0,
+          "subentryKeyPrefix": "dte"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [ "[STOP]" ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [ "CHR" ],
+          "isDictionary": true,
+          "chrFile": ".\\tables\\CHR",
+          "dictionaryFile": ".\\tables\\Dictionary",
+          "mirrorBlankDictionaryEntries": true,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+          "reverseTableEndianness": true
+        }
+	  }
+    }
+  },
+  "write": {
+    "writeableRange": {
+      "BATTLE.COM Range": {
+        "file": "BATTLE.COM",
+        "startAddress": "0x000002F4",
+        "size": "0x17"
+      },
+	  "BATTLE.COM Range #2": {
+        "file": "BATTLE.COM",
+        "startAddress": "0x00003810",
+        "size": "0x3C+0x3C"
+      },
+      "BATTLE.COM Range (Nothing)": {
+        "file": "BATTLE.COM",
+        "startAddress": "0x0031AA",
+        "size": "0x09"
+      },
+      "BATTLE.COM Range (Battle Level Up)": {
+        "file": "BATTLE.COM",
+        "startAddress": "0x000611",
+        "size": "0x0A"
+      },
+	  "BATTLE.COM Range (Battle Level Up #2)": {
+        "file": "BATTLE.COM",
+        "startAddress": "0x0008E1",
+        "size": "0x0D"
+      },
+      "MENU.COM Range": {
+		"_note": "I don't know how or why, but the aligning the text to the bottom fixes issues with control codes grabbing the wrong values for menus. This hack makes it display properly.",
+        "file": "MENU.COM",
+        "startAddress": "0x000026a5+0x18c",
+        "size": "0x713-0x18c"
+      },
+      "MENU.COM Range #2": {
+        "file": "MENU.COM",
+        "startAddress": "0x000002EC",
+        "size": "0xBC"
+      },
+      "MENU.COM Range #3": {
+        "file": "MENU.COM",
+        "startAddress": "0x00000CCC",
+        "size": "0x53"
+      },
+      "MESSAGE.MSG Range": {
+        "file": "MESSAGE.MSG",
+        "startAddress": "0x00000000",
+        "size": "0x3380"
+      },
+	  "BDATA.TBL Range #3": {
+        "file": "BDATA.TBL",
+        "startAddress": "0x00001610",
+        "size": "0x366"
+      },
+	  "BDATA.TBL Range #1": {
+        "file": "BDATA.TBL",
+        "startAddress": "0x00001200",
+        "size": "0x46"
+      },
+	  "BDATA.TBL Range #2": {
+        "file": "BDATA.TBL",
+        "startAddress": "0x00001250",
+        "size": "0x2DB"
+      },
+      "NAMAE.MSG Range": {
+        "file": "NAMAE.MSG",
+        "startAddress": "0x00000000",
+        "size": "0x69A"
+      },
+      "OPENEND.COM Range": {
+        "file": "OPENEND.COM",
+        "startAddress": "0x000004A5",
+        "size": "0x4de"
+      },
+      "SMAP.COM Range": {
+        "file": "SMAP.COM",
+        "startAddress": "0x00002ACA",
+        "size": "0x28C"
+      },
+      "SMAP.COM Range (Chest)": {
+        "file": "SMAP.COM",
+        "startAddress": "0x000006C0",
+        "size": "0x14"
+      },
+	  "MAIN.COM Range": {
+        "file": "MAIN.COM",
+        "startAddress": "0x00001db9",
+        "size": "0x3D"
+      },
+	  "STARTUP.COM Range": {
+        "file": "STARTUP.COM",
+        "startAddress": "0x00000d71",
+        "size": "0xCA"
+      },
+	  "Sector0000 Range": {
+        "file": "sector0000",
+        "startAddress": "0x000000BF",
+        "size": "0x141"
+      },
+	  "Sector0002 Range #1": {
+        "file": "sector0002",
+        "startAddress": "0x0000003a",
+        "size": "0x31"
+      },
+	  "Sector0002 Range #2": {
+        "file": "sector0002",
+        "startAddress": "0x00000072",
+        "size": "0x6"
+      },
+	  "Sector0002 Range #3": {
+        "file": "sector0002",
+        "startAddress": "0x0000009a",
+        "size": "0x3F"
+      },
+	  "STARTUP.COM Range #2": {
+        "file": "STARTUP.COM",
+        "startAddress": "0x00000a41",
+        "size": "0x176"
+      }
+    },
+    "writeRegion": [
+      {
+        "entryOwners": [
+          "Shop Stuff",
+		  "Chest"
+        ],
+        "writeableAddressRanges": [
+          "SMAP.COM Range",
+		  "SMAP.COM Range (Chest)"
+        ]
+      },
+      {
+        "entryOwners": [
+          "Menu Stuff"
+        ],
+        "writeableAddressRanges": [
+          "MENU.COM Range"
+        ]
+      },
+	  {
+        "entryOwners": [
+		  "Menu Stuff #2"
+        ],
+        "writeableAddressRanges": [
+          "MENU.COM Range #2"
+        ]
+      },
+	  {
+        "entryOwners": [
+		  "Menu Stuff #3"
+        ],
+        "writeableAddressRanges": [
+          "MENU.COM Range #3"
+        ]
+      },
+      {
+        "entryOwners": [
+          "Special text"
+        ],
+        "writeableAddressRanges": [
+          "OPENEND.COM Range"
+        ]
+      },
+      {
+        "entryOwners": [
+          "Misc"
+        ],
+        "writeableAddressRanges": [
+          "NAMAE.MSG Range"
+        ]
+      },
+      {
+        "entryOwners": [
+          "Enemy Attacks",
+		  "Battle Messages"
+        ],
+        "writeableAddressRanges": [
+          "BDATA.TBL Range #1",
+          "BDATA.TBL Range #2"
+        ]
+      },
+      {
+        "entryOwners": [
+          "Enemies"
+        ],
+        "writeableAddressRanges": [
+          "BDATA.TBL Range #3"
+        ]
+      },
+      {
+        "entryOwners": [
+          "Battle Menu"
+        ],
+        "writeableAddressRanges": [
+          "BATTLE.COM Range"
+        ]
+      },
+      {
+        "entryOwners": [
+          "Battle Menu #2"
+        ],
+        "writeableAddressRanges": [
+          "BATTLE.COM Range #2"
+        ]
+      },
+      {
+        "entryOwners": [
+          "Dialogue"
+        ],
+        "writeableAddressRanges": [
+          "MESSAGE.MSG Range"
+        ]
+      },
+      {
+        "entryOwners": [
+          "Nothing"
+        ],
+        "writeableAddressRanges": [
+          "BATTLE.COM Range (Nothing)"
+        ]
+      },
+      {
+        "entryOwners": [
+          "Battle Level Up"
+        ],
+        "writeableAddressRanges": [
+          "BATTLE.COM Range (Battle Level Up)"
+        ]
+      },
+      {
+        "entryOwners": [
+          "Battle Level Up #2"
+        ],
+        "writeableAddressRanges": [
+          "BATTLE.COM Range (Battle Level Up #2)"
+        ]
+      },
+      {
+        "entryOwners": [
+          "Disk"
+        ],
+        "writeableAddressRanges": [
+          "MAIN.COM Range"
+        ]
+      },
+      {
+        "entryOwners": [
+          "Start up Menu",
+		  "Start up Menu #2",
+		  "Disk Format"
+        ],
+        "writeableAddressRanges": [
+          "STARTUP.COM Range",
+		  "STARTUP.COM Range #2"
+        ]
+      },
+      {
+        "entryOwners": [
+          "Bootup"
+        ],
+        "writeableAddressRanges": [
+          "Sector0002 Range #1",
+          "Sector0002 Range #2",
+          "Sector0002 Range #3"
+        ]
+      },
+      {
+        "entryOwners": [
+          "DTE"
+        ],
+        "writeableAddressRanges": [
+          "Sector0000 Range"
+        ]
+      }
+    ]
+  }
+}

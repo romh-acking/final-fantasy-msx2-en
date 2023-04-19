@@ -1,0 +1,8 @@
+*.db
+*.deb
+*.lnk
+*.db:encryptable
+*.deb
+*.cdl
+*:Zone.Identifier
+launch.tmp
